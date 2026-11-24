@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>餐廳訂位模擬資料｜自編教學示例</title>
+  <style>
+    body{margin:0;background:#f6f0e5;color:#183237;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.7}main{max-width:900px;margin:auto;padding:48px 24px 80px}h1{font-size:clamp(2rem,5vw,4rem);line-height:1.1}h2{margin-top:3rem;border-bottom:1px solid #cfc5b5;padding-bottom:.4rem}section{scroll-margin-top:2rem;padding:1.2rem 0;border-bottom:1px solid #cfc5b5}code{font-weight:800;color:#176d70}aside{padding:1rem 1.2rem;border-left:6px solid #d95e42;background:#fffaf1}table{width:100%;border-collapse:collapse}th,td{padding:.7rem;border-bottom:1px solid #cfc5b5;text-align:left}a{color:#176d70}
+  </style>
+</head>
+<body><main>
+  <p><a href="../index.html">返回簡報</a></p>
+  <h1>餐廳訂位模擬資料</h1>
+  <aside><strong>自編教學示例</strong><br>本資料僅用於解釋與測試 RAG，不代表任何真實餐廳、分店、訂位政策或即時空位。</aside>
+  <h2>資料 ID</h2>
+  <section id="book-xinyi"><h3><code>BOOK-XINYI</code></h3><p><strong>信義店／訂位規則：</strong>1～6 人可線上訂位；7 人以上須電話聯絡。</p></section>
+  <section id="book-banqiao"><h3><code>BOOK-BANQIAO</code></h3><p><strong>板橋店／訂位規則：</strong>1～8 人可線上訂位；9 人以上須電話聯絡。</p></section>
+  <section id="hours-xinyi"><h3><code>HOURS-XINYI</code></h3><p><strong>信義店／營業時間：</strong>週六營業時間為 11:30–21:30。</p></section>
+  <section id="availability"><h3><code>AVAILABILITY</code></h3><p><strong>即時空位／資料範圍：</strong>本示例未串接即時訂位系統，沒有可查詢的剩餘座位資料。</p></section>
+  <h2>主測試問題與合理回答</h2>
+  <p><strong>問題：</strong>信義店這週六晚上七點，我們有七位，可以線上預約嗎？還有位嗎？</p>
+  <p><strong>合理回答：</strong>信義店 7 人訂位須電話聯絡。週六晚上 7 點位於本示例的營業時間內，但目前沒有即時空位資料，因此無法確認是否還有座位，請向分店確認。</p>
+</main></body></html>

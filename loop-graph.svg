@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">LLM Wiki 到教學 HTML 簡報的 Loop／Graph</title>
+  <desc id="desc">上半部為來源到 Wiki 的 Loop A，下半部為 Wiki 到 HTML 簡報的 Loop B，並標示四種檢查失敗時的回退路線。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8f3e8}.title{font:700 44px 'Microsoft JhengHei',sans-serif;fill:#073642}.subtitle{font:700 25px 'Microsoft JhengHei',sans-serif;fill:#0f6f73}.box{fill:#fffdf8;stroke:#187a7d;stroke-width:3;rx:14}.confirm{fill:#fff1e8;stroke:#df5b3f}.check{fill:#e9f4ef;stroke:#2c7a61}.output{fill:#073642;stroke:#073642}.boxtext{font:700 19px 'Microsoft JhengHei',sans-serif;fill:#073642;text-anchor:middle}.small{font:400 16px 'Microsoft JhengHei',sans-serif;fill:#526164;text-anchor:middle}.white{fill:white}.arrow{stroke:#187a7d;stroke-width:4;fill:none;marker-end:url(#head)}.return{stroke:#df5b3f;stroke-width:3;stroke-dasharray:9 7;fill:none;marker-end:url(#returnHead)}.returntext{font:700 16px 'Microsoft JhengHei',sans-serif;fill:#c84831}.divider{stroke:#cfbea6;stroke-width:2}.legend{font:400 17px 'Microsoft JhengHei',sans-serif;fill:#526164}.badge{fill:#df5b3f;rx:12}.badgetext{font:700 15px 'Microsoft JhengHei',sans-serif;fill:#fff;text-anchor:middle}
+    </style>
+    <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#187a7d"/></marker>
+    <marker id="returnHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#df5b3f"/></marker>
+  </defs>
+  <rect class="bg" width="1600" height="1120"/>
+  <text class="title" x="80" y="72">LLM Wiki → 教學 HTML 簡報：Loop／Graph</text>
+
+  <text class="subtitle" x="80" y="132">Loop A｜來源到 Wiki（五篇論文逐篇重複）</text>
+  <g transform="translate(80 170)">
+    <rect class="box" x="0" y="0" width="190" height="92"/><text class="boxtext" x="95" y="40">取得一篇論文</text><text class="small" x="95" y="67">主要原始來源</text>
+    <rect class="box" x="230" y="0" width="220" height="92"/><text class="boxtext" x="340" y="34">擷取內容</text><text class="small" x="340" y="62">精確頁碼／條件</text>
+    <rect class="confirm" x="490" y="0" width="230" height="92" rx="14"/><text class="boxtext" x="605" y="34">提出整理提案</text><text class="small" x="605" y="62">摘要／限制／頁面</text>
+    <rect class="confirm" x="760" y="0" width="180" height="92" rx="14"/><text class="boxtext" x="850" y="40">使用者確認</text><text class="small" x="850" y="67">先討論後寫入</text>
+    <rect class="box" x="980" y="0" width="220" height="92"/><text class="boxtext" x="1090" y="34">寫入 Wiki</text><text class="small" x="1090" y="62">論文筆記／主題頁</text>
+    <rect class="check" x="1240" y="0" width="220" height="92" rx="14"/><text class="boxtext" x="1350" y="34">引用與內鏈檢查</text><text class="small" x="1350" y="62">證據界線／衝突</text>
+    <path class="arrow" d="M190 46 H225"/><path class="arrow" d="M450 46 H485"/><path class="arrow" d="M720 46 H755"/><path class="arrow" d="M940 46 H975"/><path class="arrow" d="M1200 46 H1235"/>
+    <path class="return" d="M1350 100 V145 H340 V98"/><text class="returntext" x="820" y="137">頁碼、條件或限制無法核對 → 退回擷取原文</text>
+    <path class="return" d="M1460 46 H1510 V-38 H0 V-5"/><text class="returntext" x="1165" y="-18">通過 → 下一篇論文</text>
+  </g>
+
+  <line class="divider" x1="80" y1="370" x2="1520" y2="370"/>
+  <text class="subtitle" x="80" y="425">Loop B｜Wiki 到教學 HTML 簡報</text>
+  <g transform="translate(80 465)">
+    <rect class="box" x="0" y="0" width="190" height="96"/><text class="boxtext" x="95" y="36">查詢 Wiki</text><text class="small" x="95" y="64">＋核准案例資料</text>
+    <rect class="check" x="230" y="0" width="210" height="96" rx="14"/><text class="boxtext" x="335" y="34">證據覆蓋檢查</text><text class="small" x="335" y="62">主張能否被支持</text>
+    <rect class="box" x="480" y="0" width="190" height="96"/><text class="boxtext" x="575" y="40">撰寫逐頁稿</text><text class="small" x="575" y="68">初學者教學順序</text>
+    <rect class="check" x="710" y="0" width="220" height="96" rx="14"/><text class="boxtext" x="820" y="34">逐項主張核對</text><text class="small" x="820" y="62">來源／條件／邊界</text>
+    <rect class="box" x="970" y="0" width="180" height="96"/><text class="boxtext" x="1060" y="40">產生 HTML</text><text class="small" x="1060" y="68">投影片與連結</text>
+    <rect class="check" x="1190" y="0" width="190" height="96" rx="14"/><text class="boxtext" x="1285" y="34">瀏覽測試</text><text class="small" x="1285" y="62">翻頁／版面／引用</text>
+    <rect class="output" x="1420" y="0" width="100" height="96" rx="14"/><text class="boxtext white" x="1470" y="40">交付</text><text class="small white" x="1470" y="68">完成</text>
+    <path class="arrow" d="M190 48 H225"/><path class="arrow" d="M440 48 H475"/><path class="arrow" d="M670 48 H705"/><path class="arrow" d="M930 48 H965"/><path class="arrow" d="M1150 48 H1185"/><path class="arrow" d="M1380 48 H1415"/>
+
+    <path class="return" d="M335 104 V168 H95 V102"/><text class="returntext" x="112" y="157">來源或分店錯誤 → 退回查詢</text>
+    <path class="return" d="M820 104 V225 H575 V102"/><text class="returntext" x="585" y="214">回答超出證據 → 退回逐頁稿</text>
+    <path class="return" d="M575 232 V287 H335 V102"/><text class="returntext" x="332" y="279">大綱缺證據 → 退回證據覆蓋</text>
+    <path class="return" d="M1285 104 V344 H1060 V102"/><text class="returntext" x="1062" y="335">翻頁／版面／引用失效 → 退回 HTML</text>
+  </g>
+
+  <g transform="translate(80 955)">
+    <rect class="badge" x="0" y="0" width="82" height="30"/><text class="badgetext" x="41" y="21">回退路線</text>
+    <text class="legend" x="100" y="22">紅色虛線表示檢查失敗後回到較早節點；修正後必須重新通過後續檢查。</text>
+    <text class="legend" x="0" y="66">設計目的：把「檢索錯誤、生成超出證據、研究條件省略、HTML 實作錯誤」分開攔截與修正。</text>
+  </g>
+</svg>
